@@ -16,7 +16,6 @@
                   </ul>
                 </li>
                 <li><a href="{{url('/berita')}}">Berita</a></li>
-                <li><a href="{{url('/galeri')}}">Galeri</a></li>
                 <li><a href="{{url('/kontak')}}">Kontak</a></li>
                 
               </ul>
@@ -37,6 +36,7 @@
                     <div class="wow fadeInDown" data-wow-delay="0.1s">
                     <div class="section-heading">
                     <h2 class="h-bold">Fasilitas SMK Assalaam Bandung</h2>
+                    <h2>Ruangan Praktik TKR TSM RPL</h2>
                     </div>
                     </div>
                     <hr>
@@ -49,17 +49,18 @@
                 <div class="col-sm-12 col-md-12 col-lg-12" >
                     <div class="wow bounceInUp" data-wow-delay="0.2s">
                     <div id="owl-works" class="owl-carousel">
-                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/1.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/1.jpg') }}" class="img-responsive" alt="img"></a></div>
-                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/2.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/2@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/2.jpg') }}" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/3.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/3@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/3.jpg') }}" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/4.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/4@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/4.jpg') }}" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/5.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/5@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/5.jpg') }}" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/6.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/6@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/6.jpg') }}" class="img-responsive " alt="img"></a></div>
+                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/tkr.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/tkr@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/tkr.jpg') }}" class="img-responsive" alt="img"></a></div>
+                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/rt.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/rt@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/rt.jpg') }}" class="img-responsive " alt="img"></a></div>
+                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/t.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/t@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/t.jpg') }}" class="img-responsive " alt="img"></a></div>
+                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/s.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/s@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/s.jpg') }}" class="img-responsive " alt="img"></a></div>
+                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/rpl.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/rpl@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/rpl.jpg') }}" class="img-responsive " alt="img"></a></div>
+                        <div class="item"><a href="{{ asset('Frontend/Medicio/img/photo/l.jpg') }}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/l@2x.jpg"><img src="{{ asset('Frontend/Medicio/img/photo/l.jpg') }}" class="img-responsive " alt="img"></a></div>
                     </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- /Section: works -->
 @endsection
