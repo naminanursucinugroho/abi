@@ -26,7 +26,6 @@ Route::get('/like/{id}','FrontController@like');
 Route::get('/unlike/{id}','FrontController@unlike');
 Route::get('/kategori/{id}','FrontController@kategori');
 Route::post('/komentar','FrontController@komentar');
-Route::get('/galeri','FrontController@galeri');
 
 Auth::routes();
 
@@ -37,7 +36,7 @@ Route::group(['prefix'=>'admin','middleware'=>['auth']], function(){
 	Route::resource('artikel','ArtikelController');
 	Route::resource('profil','ProfilController');
 	Route::resource('kejuruan','KejuruanController');
-	// Route::resource('fasilitas','FasilitasController');
+	//Route::resource('fasilitas','FasilitasController');
 	Route::resource('prestasi','PrestasiController');
 	Route::resource('ekskul','EkskulController');
 	// Route::resource('komponen','KomponenController');

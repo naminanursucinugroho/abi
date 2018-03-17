@@ -12,7 +12,8 @@
         <div class="pull-left info">
           <p>{{ Auth::user()->name }}</p>
           <a href=""><i class="fa fa-circle text-primary"></i> {{ Auth::user()->akses }}</a>
-        </div>
+        </div>+
+        +
       </div>
       
       <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -22,6 +23,7 @@
           <a href="{{ url('/home') }}">
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
           </a>
+            <img src="{{asset('img/'.$forntend->photo)}}" class="img-responsive img-thumbnail" alt="" style="width: 225px; height: 225px;">
         </li>
 
         <li>

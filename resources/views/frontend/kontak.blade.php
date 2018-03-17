@@ -16,7 +16,6 @@
                   </ul>
                 </li>
                 <li><a href="{{url('/berita')}}">Berita</a></li>
-                <li><a href="{{url('/galeri')}}">Galeri</a></li>
                 <li class="active"><a href="{{url('/kontak')}}">Kontak</a></li>
                 
               </ul>

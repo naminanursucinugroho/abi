@@ -22,6 +22,9 @@
           <a href="{{ url('/home') }}">
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
           </a>
+          <li>
+            <a href="{{route('artikel.index')}}"></a>
+          </li>
         </li>
 
         <li>

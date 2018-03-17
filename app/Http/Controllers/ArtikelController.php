@@ -112,8 +112,7 @@ class ArtikelController extends Controller
             'judul'=>'required',
             'konten'=>'required',
             'tgl_kegiatan'=>'required',
-            'kategori_id'=>'required',
-            'foto'=>'image|max:20048']);
+            'kategori_id'=>'required']);
         $artikel = Artikel::find($id);
         $author = Auth::user()->name;
         $artikel->author = $author;

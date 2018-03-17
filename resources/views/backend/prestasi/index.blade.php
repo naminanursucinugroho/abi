@@ -103,7 +103,7 @@
                         <img src="{{asset('img/'.$kejuruan->gambar)}}" class="img-responsive img-thumbnail" alt="" style="width: 225px; height: 225px;">
                         </a>
                         <br><br><br>
-                        <a href="{{ route('ekskul.edit', $kejuruan->id) }}" class="btn btn-primary btn-block"><span class="fa fa-edit"></span> Ubah Detail</a>
+                        <a href="{{ route('prestasi.edit', $kejuruan->id) }}" class="btn btn-primary btn-block"><span class="fa fa-edit"></span> Ubah Detail</a>
                     </div>
                     </div>
                 </div>

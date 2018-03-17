@@ -38,8 +38,6 @@ class PrestasiController extends Controller
     {
         $this->validate($request, [
             'judul'=>'required']);
-        
-
         $prestasi= new Prestasi;
         $prestasi->judul = $request->judul;
         $prestasi->keterangan = $request->keterangan;
@@ -77,7 +75,10 @@ class PrestasiController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $prestasi = Prestasi::find($id);
+
+        return view('backend.prestasi.edit', compact('prestasi'));
     }
 
     /**
@@ -89,7 +90,25 @@ class PrestasiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'judul'=>'required']);
+        $prestasi= Prestasi::find($id);
+        $prestasi->update($request->all());
+        $prestasi->judul = $request->judul;
+        $prestasi->keterangan = $request->keterangan;
+
+        if ($request->hasFile('gambar')) {
+        $file = $request->file('gambar');
+        $destinationPath = public_path().'/img/';
+        $filename = str_random(6).'_'.$file->getClientOriginalName();
+        $uploadSuccess = $file->move($destinationPath, $filename);
+        $prestasi->gambar = $filename;
+        }
+ 
+        $prestasi->save();
+        // dd($prestasi);
+        alert()->success('Tersimpan')->autoclose(3500);
+        return redirect()->route('prestasi.index');
     }
 
     /**

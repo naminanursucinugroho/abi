@@ -48,7 +48,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="{{ url ('/') }}">Home</a></li>
+          <li class="active"><a href="{{ url ('/home') }}">Home</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sekolah <b class="caret"></b>
             <ul class="dropdown-menu">
@@ -70,9 +70,8 @@
   <!-- Section: intro -->
   <section id="intro" class="intro">
 
-    <div class="text">
+    <div class="slogan">
       <h2>WELCOME<span class="text_color">COMPANY</span> </h2>
-      <p class="text-right wow bounceIn" data-wow-delay="0.4s">
       <h4>JL.Situtarate</h4>
         <a href="{{ url('/profil') }}" class="btn btn-skin btn-lg">Pelajari Selengkapnya <i class="fa fa-angle-right"></i></a>
       </p>
@@ -118,18 +117,18 @@
                             <div class="item active">
                                 <div class="col-md-4 col-sm-6">
                                     <div class="block-text rel zmin">
-                                        <a title="" href="#">Ute Juli Kurnia</a>
+                                        <a href="text">Ute Juli Kurnia</a>
                                         <p>Menjadikan Siswa Siswi SMK ASSALAAM Bandung menjadi siswa yang berbakat</p>
                                         <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                                     </div>
                                     <div class="person-text rel text-light">                    
                                         <img src="{{ asset('/Frontend/Medicio/img/testimonials/ute.jpg') }}" alt="" class="person img-circle" />
-                                        <a title="" href="#">Ute Juli Kurnia</a>
+                                        <a href="text">Ute Juli Kurnia</a>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 hidden-xs">
                                     <div class="block-text rel zmin">
-                                        <a title="" href="#">Agung Wahyudi</a>
+                                        <a href="text">Agung Wahyudi</a>
                                         <p>Menjadikan siswa siswi SMK ASSALAAm Bandung Menjadi Siswa yang mempunyai bakat progeming</p>
                                         <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                                     </div>
