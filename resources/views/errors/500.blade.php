@@ -1,1 +1,0 @@
-aya keneh nu salah

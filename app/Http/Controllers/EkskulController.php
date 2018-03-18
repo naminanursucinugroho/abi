@@ -14,14 +14,14 @@ class EkskulController extends Controller
      */
     public function index()
     {
-        $kejuruans = Ekskul::all();
-        return view('backend.ekskul.index', compact('kejuruans'));
+        $ekskuls = Ekskul::all();
+        return view('backend.ekskul.index', compact('ekskuls'));
     }
 
     public function kategori()
     {
-        $kejuruans = Ekskul::all();
-        return view('backend.ekskul.index', compact('kejuruans'));
+        $ekskuls = Ekskul::all();
+        return view('backend.ekskul.index', compact('ekskuls'));
     }
 
     /**
@@ -73,7 +73,7 @@ class EkskulController extends Controller
      */
     public function show($id)
     {
-        //
+    
     }
 
     /**
@@ -84,7 +84,9 @@ class EkskulController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $ekskul = Ekskul::find($id);
+        return view('backend.ekskul.edit', compact('ekskuls'));
     }
 
     /**
@@ -96,7 +98,27 @@ class EkskulController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nama'=>'required|unique:ekskuls,nama',
+            'kategori_id'=>'required']);
+        $ekskul = Ekskul::find($id);
+        $author = Auth::user()->name;
+        $ekskul->author = $author;
+        $ekskul->nama = $request->judul;
+        $ekskul->kategori_id = $request->kategori_id;
+
+        if ($request->hasFile('foto')) {
+        $file = $request->file('foto');
+        $destinationPath = public_path().'/img/';
+        $filename = str_random(6).'_'.$file->getClientOriginalName();
+        $uploadSuccess = $file->move($destinationPath, $filename);
+        $ekskul->foto = $filename;
+        }
+
+        $ekskul->save();
+        // dd($ekskul);
+        alert()->success('Tersimpan')->autoclose(3500);
+        return redirect()->route('ekskul.index');    
     }
 
     /**
@@ -107,6 +129,11 @@ class EkskulController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        $ekskul = Ekskul::find($id);
+            $ekskul->delete();
+            alert()->success('Terhapus')->autoclose(3500);
+
+        return redirect()->route('ekskul.index');
     }
 }

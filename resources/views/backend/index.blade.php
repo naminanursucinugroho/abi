@@ -16,17 +16,20 @@
       </div>
       
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MENU UTAMA</li>
-        <li class="active">
-          <a href="{{ url('/home') }}">
+       <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active treeview">
+          <a href="#">
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
-          <li>
-            <a href="{{route('artikel.index')}}"></a>
-          </li>
+          <ul class="treeview-menu">
+            <li class="nabar-band"><a href="{{url('/home')}}"><i class="fa fa-circle-o"></i>Welcome</a></li> 
+        </a>
+          </ul>
         </li>
-
         <li>
           <a href="{{ route('akun.index') }}">
             <i class="fa fa-group"></i> <span>Akun Author</span>

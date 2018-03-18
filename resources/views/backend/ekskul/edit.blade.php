@@ -26,7 +26,7 @@
 
         <li>
           <a href="{{ route('akun.index') }}">
-            <i class="fa fa-group"></i> <span>Akun Author</span>
+            <i class="fa fa-group"></i> <span>Akun Admin</span>
           </a>
         </li>
         
@@ -40,8 +40,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('profil.edit', 1 ) }}"><i class="fa fa-circle-o"></i> Profil Umum</a></li>
-            <li><a href="{{ route('kejuruan.index') }}"><i class="fa fa-circle-o"></i> Kejuruan</a></li>
-            <li class="active"><a href="{{ route('ekskul.index') }}"><i class="fa fa-circle-o"></i> Ekstrakurikuler</a></li>
+            <li class="active"><a href="{{ route('kejuruan.index') }}"><i class="fa fa-circle-o"></i> Kejuruan</a></li>
+            <li><a href="{{ route('ekskul.index') }}"><i class="fa fa-circle-o"></i> Ekstrakurikuler</a></li>
             <li><a href="{{ route('prestasi.index') }}"><i class="fa fa-circle-o"></i> Prestasi</a></li>
             <li><a href="{{ route('artikel.index') }}"><i class="fa fa-circle-o"></i> Artikel</a></li>
           </ul>
@@ -66,7 +66,6 @@
     <!-- /.sidebar -->
   </aside>
 @endsection
-
 @section('content')
 
 <!-- Main content -->
@@ -95,19 +94,19 @@
             <!-- /.box-header -->
             <div class="box-body pad">
 
-              @foreach($ekskuls as $ekskul)
+              @foreach($kejuruans as $kejuruan)
               <div class="col-sm-4" align="center">
                 <a href="">
                     <div class="box box-primary">
                       <div class="box-header">
-                        <h3 class="box-title">{{ $ekskul->nama }}</h3>
+                        <h3 class="box-title">{{ $kejuruan->nama }}</h3>
                         
                       </div>
                     <div class="box-body pad">
-                        <img src="{{asset('img/'.$ekskul->foto)}}" class="img-responsive img-thumbnail" alt="" style="width: 225px; height: 225px;">
+                        <img src="{{asset('img/'.$kejuruan->foto)}}" class="img-responsive img-thumbnail" alt="" style="width: 225px; height: 225px;">
                         </a>
                         <br><br><br>
-                        <a href="{{ route('ekskul.edit', $ekskul->id) }}" class="btn btn-primary btn-block"><span class="fa fa-edit"></span> Ubah Detail</a>
+                        <a href="{{ route('ekskul.edit', $kejuruan->id) }}" class="btn btn-primary btn-block"><span class="fa fa-edit"></span> Ubah Detail</a>
                     </div>
                     </div>
                 </div>
@@ -141,7 +140,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('kategori_id') ? 'has-error' : '' }}">
-                      {!! Form::label('kategori_id','Kategori Ekskul *',['class'=>'col-md-12']) !!}
+                      {!! Form::label('kategori_id','Kategori Kejuruan *',['class'=>'col-md-12']) !!}
                       <div class="col-md-12">
                         {!! Form::select('kategori_id',App\KategoriEkskul::pluck('nama','id')->all(),null,['class'=>'form-control','placeholder'=>'Pilih Kategori', 'required']) !!}
                         {!! $errors->first('kategori_id', '<p class="help-block">:message</p>') !!}

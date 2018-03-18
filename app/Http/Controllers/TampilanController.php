@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\tampilan;
 use Illuminate\Http\Request;
-use App\KategoriEkskul;
 
-class KatEkskulController extends Controller
+class TampilanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,18 +35,16 @@ class KatEkskulController extends Controller
      */
     public function store(Request $request)
     {
-        $kategori = KategoriEkskul::create($request->all());
-        alert()->success('Kategori Ekstrakurikuler Tersimpan')->autoclose(3500);
-        return redirect()->route('ekskul.index');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\tampilan  $tampilan
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(tampilan $tampilan)
     {
         //
     }
@@ -54,10 +52,10 @@ class KatEkskulController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\tampilan  $tampilan
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(tampilan $tampilan)
     {
         //
     }
@@ -66,26 +64,22 @@ class KatEkskulController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\tampilan  $tampilan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, tampilan $tampilan)
     {
-        
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\tampilan  $tampilan
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(tampilan $tampilan)
     {
-        $member = KategoriEkskul::find($id);
-            $member->delete();
-            alert()->success('Terhapus')->autoclose(3500);
-
-        return redirect()->route('ekskul.index');
+        //
     }
 }

@@ -14,8 +14,8 @@ class PrestasiController extends Controller
      */
     public function index()
     {
-        $kejuruans = Prestasi::all();
-        return view('backend.prestasi.index', compact('kejuruans'));
+        $prestasis = Prestasi::all();
+        return view('backend.prestasi.index', compact('prestasis'));
     }
 
     /**
@@ -78,7 +78,7 @@ class PrestasiController extends Controller
         
         $prestasi = Prestasi::find($id);
 
-        return view('backend.prestasi.edit', compact('prestasi'));
+        return view('backend.prestasi.edit', compact('prestasis'));
     }
 
     /**
@@ -119,6 +119,10 @@ class PrestasiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $prestasi = Prestasi::find($id);
+            $prestasi->delete();
+            alert()->success('Terhapus')->autoclose(3500);
+
+        return redirect()->route('prestasi.index');
     }
 }

@@ -75,13 +75,6 @@
         <div class="col-md-12">
           <div class="box box-info">
             <div class="box-header">
-              @php
-              $jml = $kejuruans->count();
-              @endphp
-              <h3 class="box-title">Total Prestasi ( {{$jml}} )
-                <small>SMK Assalaam Bandung</small>
-                
-              </h3>
               <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-info">
               <span class="fa fa-plus"></span>
                 Tambah Prestasi
@@ -91,19 +84,19 @@
             <!-- /.box-header -->
             <div class="box-body pad">
 
-              @foreach($kejuruans as $kejuruan)
+              @foreach($prestasis as $prestasi)
               <div class="col-sm-4" align="center">
                 <a href="">
                     <div class="box box-primary">
                       <div class="box-header">
-                        <h3 class="box-title">{{ $kejuruan->judul }}</h3>
+                        <h3 class="box-title">{{ $prestasi->judul }}</h3>
                         
                       </div>
                     <div class="box-body pad">
-                        <img src="{{asset('img/'.$kejuruan->gambar)}}" class="img-responsive img-thumbnail" alt="" style="width: 225px; height: 225px;">
+                        <img src="{{asset('img/'.$prestasi->gambar)}}" class="img-responsive img-thumbnail" alt="" style="width: 225px; height: 225px;">
                         </a>
                         <br><br><br>
-                        <a href="{{ route('prestasi.edit', $kejuruan->id) }}" class="btn btn-primary btn-block"><span class="fa fa-edit"></span> Ubah Detail</a>
+                        <a href="{{ route('prestasi.edit', $prestasi->id) }}" class="btn btn-primary btn-block"><span class="fa fa-edit"></span> Ubah Detail</a>
                     </div>
                     </div>
                 </div>
@@ -135,15 +128,6 @@
                         {!! $errors->first('judul', '<p class="help-block">:message</p>') !!}
                       </div>
                     </div>
-
-                    <div class="form-group{{ $errors->has('keterangan') ? 'has-error' : '' }}">
-                      {!! Form::label('keterangan','Keterangan Prestasi *',['class'=>'col-md-12']) !!}
-                      <div class="col-md-12">
-                        {!! Form::textarea('keterangan',null,['class'=>'form-control']) !!}
-                        {!! $errors->first('keterangan', '<p class="help-block">:message</p>') !!}
-                      </div>
-                    </div>
-
                     <div class="form-group{{ $errors->has('gambar') ? 'has-error' : '' }}">
                       {!! Form::label('gambar','Foto Prestasi *',['class'=>'col-md-12']) !!}
                         <div class="col-md-6">
